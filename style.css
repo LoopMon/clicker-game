@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'loja game';
+    width: 100%;
+    min-height: 100%;
+}
+
+main .loja {
+    grid-area: loja;
+    background: #1E1D25;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    font-size: 1.4em;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.item span {
+    padding: 10px 20px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+main .game {
+    grid-area: game;
+    background: #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.game h3 {
+    font-size: 2em;
+    color: #B1B1B1;
+    text-align: center;
+}
+
+.game #ball {
+    width: 250px;
+    height: 250px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+div.click {
+    animation: clique 0.1s;
+}
+
+@keyframes clique {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.9;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
